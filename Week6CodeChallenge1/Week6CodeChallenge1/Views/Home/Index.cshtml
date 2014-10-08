@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>You Just Landed</h2>
+<div>
+    <img src="~/Content/Images/naruto-and-minato-team-up-in-tailed-beast-mode.jpg" height="300px"/>
+
+</div>
+<div class="aboutme"> 
+    <h3> About Me</h3>
+    
+    <p>
+I was born in the bay area of California and raised in Colorado. I love to code and play sports. I am more than a problem solver, I'm a solution facilitator. I can't imagine life without coding. For more about me click the About link.<br />
+      <a href="@Url.Action("Index", "About")">About</a>
+          </p>
+</div>
+
+&nbsp
+    
+<div class="Work">
+    <h3>Work</h3>
+    <p>
+I've made many console applications and a few websites. I'm proficent in C#, SQL, JavaScript/jQuery, CSS, and HTML. For examples of my work click the Work link.<br />
+        <a href="@Url.Action("Index", "Work")">Work</a>
+        </p>
+</div>
+
+&nbsp
+   
+<div class="Contact">
+     <h3> Contact Information</h3>
+    <p>
+I'm in the market for a job as an apprentice .Net developer. I am looking for an environment to grow and expand in the technology field. To contact me click the Contact link.<br />
+       <a href="@Url.Action("Index", "Contact")">Contact Form</a>
+         </p>
+</div>

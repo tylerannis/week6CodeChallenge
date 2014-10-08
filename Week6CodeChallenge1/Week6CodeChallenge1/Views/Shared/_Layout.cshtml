@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="center">
+        <header>
+            <h1>Tyler Annis</h1>
+        
+    </div>
+    <nav class="headernav">
+        <a href="@Url.Action("Index","Home")">Home</a>
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        @* &nbsp; makes a space in the text that won't break the line *@
+        <!-- These are html comments and if you inspect the element these are the only comments that show up-->
+        <a href="@Url.Action("Index", "About")">About</a>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href="@Url.Action("Index", "Work")">Work</a>
+       &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <a href="@Url.Action("Index", "Contact")">Contact Form</a>
+    </nav>
+    </header>
+    <div id="content">
+    @RenderBody()
+        </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+     <footer>
+        <p class="foot">
+            
+        
+         <nav class="footernav">
+        <a href="@Url.Action("Index","Home")">Home</a>
+       &nbsp;|&nbsp;
+        @* &nbsp; makes a space in the text that won't break the line *@
+        <!-- These are html comments and if you inspect the element these are the only comments that show up-->
+        <a href="@Url.Action("Index", "About")">About</a>
+        &nbsp;|&nbsp;
+        <a href="@Url.Action("Index", "Work")">Work</a>
+        &nbsp|&nbsp
+        <a href="@Url.Action("Index", "Contact")">Contact Form</a>
+    </nav>
+            Copyright 2014 Tyler Annis
+            </p>
+    </footer>
+</body>
+</html>

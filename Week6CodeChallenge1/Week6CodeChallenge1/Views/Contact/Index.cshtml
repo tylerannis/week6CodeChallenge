@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Contact Me</h2>
+@*added form id to make ajax*@
+<form id="contactForm" action="@Url.Action("Index", "Contact")" method="post">
+    @*add a hidden field to hold the ID*@
+    <br />
+   
+        <div  class="firstname">
+        @*create lable, text box, and the validation for each proprety*@
+        
+        @Html.TextBoxFor(x => x.First_Name, new { @placeholder = "First Name" })
+            <br />
+        @Html.ValidationMessageFor(x => x.First_Name)
+    </div>
+     
+    <div class="lastname">
+        
+        @Html.TextBoxFor(x => x.Last_Name, new { @placeholder = "Last Name" })
+        <br />
+        @Html.ValidationMessageFor(x => x.Last_Name)
+    </div>
+    <br />
+      <div class="email">
+        
+        @Html.TextBoxFor(x => x.Email, new { @placeholder = "Email Address" })
+          <br />
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+      <div class="phone">
+        
+        @Html.TextBoxFor(x => x.Phone, new { @placeholder = "Phone Number" })
+          <br />
+        @Html.ValidationMessageFor(x => x.Phone)
+    </div>
+    <br />
+      <div class="comment">
+        
+        @Html.TextAreaFor(x => x.Comment, new { @placeholder = "Comment" })
+          <br />
+        @Html.ValidationMessageFor(x => x.Comment)
+    </div>
+
+    <input type="submit" value="Submit" />
+    
+</form>
+   
+@*ADD a reference to jQuery Validation*@
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    }
+  
+
+
